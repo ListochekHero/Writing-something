@@ -1,0 +1,25 @@
+#include <string>
+
+using namespace std;
+std::string to_camel_case(std::string text) {
+  int i,k,l=0;
+  k = text.length();
+  for (i = 0; i < k;i++) {
+    if (text.at(i) == '-' || text.at(i) == '_') {
+      l++;
+      if (i < k-1) {
+        text.at(i + 1) = toupper(text.at(i + 1));
+      }
+
+    }
+  }
+  for (i = 0; i < l; i++) {
+    if (text.find('-') != text.npos) {
+      text.replace(text.find('-'), 1, "");
+    }
+    if (text.find('_') != text.npos) {
+      text.replace(text.find('_'), 1, "");
+    }
+  }
+  return text;
+}
