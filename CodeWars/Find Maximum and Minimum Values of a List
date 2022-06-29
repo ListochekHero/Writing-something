@@ -1,0 +1,14 @@
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int min(vector<int> list){
+    list[0]=*min_element(begin(list),end(list));
+    return list[0];
+}
+
+int max(vector<int> list){
+    list[0]=*max_element(begin(list),end(list));
+    return list[0];
+}
