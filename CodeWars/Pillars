@@ -1,0 +1,9 @@
+long pillars(int num_of_pillars, int distance, int width) {
+  int answer;
+  if(num_of_pillars!=1){
+  answer=(num_of_pillars-1)*100*distance+width*(num_of_pillars-2);
+    }else{
+    answer=0;
+  }
+  return answer;
+}
