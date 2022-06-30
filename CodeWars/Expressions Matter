@@ -1,0 +1,14 @@
+#include<algorithm>
+using namespace std;
+unsigned short int expressionsMatter (unsigned short int a , unsigned short int b , unsigned short int c)
+{
+    int answers[6];
+    answers[0]=a*b*c;
+    answers[1]=a+b+c;
+    answers[2]=a*b+c;
+    answers[3]=a+b*c;
+    answers[4]=a*(b+c);
+    answers[5]=(a+b)*c;
+int* i=max_element(begin(answers),end(answers));
+    return *i ; 
+}
