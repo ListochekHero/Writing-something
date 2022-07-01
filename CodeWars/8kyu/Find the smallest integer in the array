@@ -1,0 +1,11 @@
+#include <vector>
+#include <iostream>
+#include <algorithm> 
+
+using namespace std; 
+
+int findSmallest(vector <int> list)
+{
+  auto i=min_element(begin(list), end(list));
+  return  *i;
+  }
