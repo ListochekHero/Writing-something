@@ -1,0 +1,12 @@
+#include<string>
+#include <math.h>
+using namespace std;
+int square_digits(int num) {
+	string num_new, new2;
+	num_new = to_string(num);
+	for (int i = 0; i < num_new.length(); i++) {	
+		new2.append(to_string((int)pow(stoi(num_new.substr(i, 1)), 2)));
+	}
+	num = stoi(new2);
+	return num;
+}
